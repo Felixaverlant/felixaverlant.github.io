@@ -24,7 +24,7 @@ $(document).ready(function(){
 		});
 		
 		$("#typed").typed({
-			strings:["<a href='https://twitter.com/felixaverlant' target='_blank'>Twitter</a> - <a href='https://github.com/Felixaverlant' target='_blank'>Github</a> - <a href='https://www.linkedin.com/in/f%C3%A9lix-averlant-a1887017' target='_blank'>LinkedIn</a> - <a href='mailto:"+string4+" target='_blank'>"+string4+" </a>" ],
+			strings:["<a href='https://twitter.com/felixaverlant' target='_blank'>Twitter</a> - <a href='https://github.com/Felixaverlant' target='_blank'>Github</a> - <a href='https://www.linkedin.com/in/f%C3%A9lix-averlant-a1887017' target='_blank'>LinkedIn</a> - <a href='mailto:"+string4+"' target='_blank'>"+string4+" </a>" ],
 			startDelay: 7500,
 			typeSpeed: 60,
 			showCursor:false,
