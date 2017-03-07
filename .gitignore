@@ -1,1 +1,4 @@
 design/
+node_modules/
+baseball-fantasy-comparator/src/
+.DS_Store
