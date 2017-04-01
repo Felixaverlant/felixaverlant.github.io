@@ -1,0 +1,45 @@
+,team_id,lg_id,loc_team_tx,name_team_tx
+0,BOS,A,Boston,Red Sox
+1,CHA,A,Chicago,White Sox
+2,CLE,A,Cleveland,Indians
+3,DET,A,Detroit,Tigers
+4,NYA,A,New York,Yankees
+5,PHA,A,Philadelphia,Athletics
+6,SLA,A,St.Louis,Browns
+7,WS1,A,Washington,Senators
+8,BRO,N,Brooklyn,Dodgers
+9,BSN,N,Boston,Braves
+10,CHN,N,Chicago,Cubs
+11,CIN,N,Cincinnati,Reds
+12,NY1,N,New York,Giants
+13,PHI,N,Philadelphia,Phillies
+14,PIT,N,Pittsburgh,Pirates
+15,SLN,N,St.Louis,Cardinals
+16,MLN,N,Milwaukee,Braves
+17,BAL,A,Baltimore,Orioles
+18,KC1,A,Kansas City,Athletics
+19,LAN,N,Los Angeles,Dodgers
+20,SFN,N,San Francisco,Giants
+21,LAA,A,Los Angeles,Angels
+22,MIN,A,Minnesota,Twins
+23,WS2,A,Washington,Senators
+24,HOU,N,Houston,Colts
+25,NYN,N,New York,Mets
+26,CAL,A,California,Angels
+27,ATL,N,Atlanta,Braves
+28,OAK,A,Oakland,Athletics
+29,KCA,A,Kansas City,Royals
+30,SE1,A,Seattle,Pilots
+31,MON,N,Montreal,Expos
+32,SDN,N,San Diego,Padres
+33,MIL,A,Milwaukee,Brewers
+34,TEX,A,Texas,Rangers
+35,TOR,A,Toronto,Blue Jays
+36,SEA,A,Seattle,Mariners
+37,FLO,N,Florida,Marlins
+38,COL,N,Colorado,Rockies
+39,ANA,A,Anaheim,Angels
+40,TBA,A,Tampa Bay,Devil Rays
+41,ARI,N,Arizona,Diamondbacks
+42,WAS,N,Washington,Nationals
+43,MIA,N,Miami,Marlins
