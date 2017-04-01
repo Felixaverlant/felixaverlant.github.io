@@ -1351,7 +1351,7 @@ function draw_calendar(team){
     var parseY = d3.timeParse("%Y%m%d");
     var formatY = d3.timeFormat("%Y");
 
-    d3.csv("dist/data/"+team+".csv", function(error, csv) {
+    d3.csv("dist-cal/data/"+team+".csv", function(error, csv) {
 
       var date_min = d3.min(csv, function(d){ return formatY(parseY(d.game_dt)); 	})
       var date_max = d3.max(csv, function(d){ return formatY(parseY(d.game_dt))	})
