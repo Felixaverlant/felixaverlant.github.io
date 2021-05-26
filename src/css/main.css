@@ -1,0 +1,61 @@
+@font-face {
+  font-family: ibmplex;
+  src: url("/css/IBMPlexMono-Light.otf");
+}
+
+body {
+	margin: 0;
+	overscroll-behavior: none;
+}
+
+#info {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1;
+}
+
+#notSupported {
+	width: 50%;
+	margin: auto;
+	background-color: #f00;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+
+@media screen and (min-width : 591px){
+	h1{
+		font-size:35px;
+	}
+}
+
+@media screen and (min-width : 370px) and (max-width : 590px){
+	h1{
+		font-size:22px;
+	}
+}
+
+
+@media screen and (max-width : 369px){
+	h1{
+		font-size:19px;
+	}
+}
+
+h1 {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -97%);
+	font-family: ibmplex;
+	color:white;
+}
