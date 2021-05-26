@@ -1,6 +1,6 @@
 @font-face {
   font-family: ibmplex;
-  src: url("/css/IBMPlexMono-Light.otf");
+  src: url("src/css/IBMPlexMono-Light.otf");
 }
 
 body {
