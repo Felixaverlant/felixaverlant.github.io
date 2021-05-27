@@ -6,6 +6,7 @@
 body {
 	margin: 0;
 	overscroll-behavior: none;
+	font-family:ibmplex;
 }
 
 #info {
@@ -31,6 +32,18 @@ body {
 	padding: 10px;
 }
 
+.pinfos{
+	width: 350px;
+	position:absolute;
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	color:black;
+}
+
+.lkr {
+	text-align: center;
+}
 
 @media screen and (min-width : 591px){
 	h1{
@@ -52,10 +65,13 @@ body {
 }
 
 h1 {
-	position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -97%);
-	font-family: ibmplex;
-	color:white;
+	text-shadow: 1px 1px 1px white;
+	text-align:center;
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.pinfos a{
+	text-shadow: 1px 1px 1px white;
+	color: black;
 }
