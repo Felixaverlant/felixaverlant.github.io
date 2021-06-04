@@ -33,7 +33,7 @@ body {
 }
 
 .pinfos{
-	width: 350px;
+	width: 450px;
 	position:absolute;
 	top: 50%;
     left: 50%;
@@ -72,6 +72,16 @@ h1 {
 }
 
 .pinfos a{
-	text-shadow: 1px 1px 1px white;
+	/* text-shadow: 1px 1px 1px white; */
 	color: black;
+}
+
+.projects {
+	/* font-size: 12px; */
+	text-align:center;
+}
+
+.projects p {
+	font-size:14px;
+	margin:20px 0 0 0;
 }
