@@ -32,7 +32,9 @@ function init() {
 	for ( let i = 0; i < instances; i ++ ) {
 
 		offsets.push( Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5 );
-		colors.push(0.1,0.1,0.2,0.2)
+		// colors.push(0.2,0.4,0.3,0.2)
+  		colors.push(0.3,0.4,0.5,0.2)
+
 		vector.set( Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random() * 2 - 1 );
 		vector.normalize();
 		orientationsStart.push( vector.x, vector.y, vector.z, vector.w );
