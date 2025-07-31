@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/felixaverlant/Documents/projects/felixaverlant.github.io/src/app/lib/text.tsx"],"sourcesContent":["import { ReactNode } from \"react\";\nimport { twMerge } from 'tailwind-merge';\n\nexport const BigIntroText = ({classNames, children}\n   :{children:ReactNode, classNames?:string}\n) => <div style={{\n   writingMode: 'vertical-rl',\n   transform:'rotate(180deg)'\n}} className={twMerge(classNames, \"text-[400px] font-bold text-gray-900\")}>{children}</div>"],"names":[],"mappings":";;;;AACA;;;AAEO,MAAM,eAAe,CAAC,EAAC,UAAU,EAAE,QAAQ,EACN,iBACvC,8OAAC;QAAI,OAAO;YACd,aAAa;YACb,WAAU;QACb;QAAG,WAAW,CAAA,GAAA,2JAAA,CAAA,UAAO,AAAD,EAAE,YAAY;kBAA0C","debugId":null}},
+    {"offset": {"line": 32, "column": 0}, "map": {"version":3,"sources":["file:///Users/felixaverlant/Documents/projects/felixaverlant.github.io/src/app/module/index.tsx"],"sourcesContent":["'use client';\n\nimport { Parallax } from 'react-scroll-parallax';\nimport { BigIntroText } from '../lib/text';\n\nexport default function Main() {\n  return (\n    <>\n    <Parallax scale={[1 ,1]} translateY={[90, 0]} speed={-10}>\n      <BigIntroText>Felix Averlant</BigIntroText>\n    </Parallax>\n\n    </>\n  );\n}"],"names":[],"mappings":";;;;AAEA;AAAA;AACA;AAHA;;;;AAKe,SAAS;IACtB,qBACE;kBACA,cAAA,8OAAC,yMAAA,CAAA,WAAQ;YAAC,OAAO;gBAAC;gBAAG;aAAE;YAAE,YAAY;gBAAC;gBAAI;aAAE;YAAE,OAAO,CAAC;sBACpD,cAAA,8OAAC,0HAAA,CAAA,eAAY;0BAAC;;;;;;;;;;;;AAKpB","debugId":null}}]
+}
