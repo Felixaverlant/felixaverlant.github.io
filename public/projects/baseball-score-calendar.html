@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Baseball Score Calendar | Félix Averlant</title>
+    <meta name="description" content="Baseball history score calendar visualization by team (1921–2016)">
+    <meta name="keywords" content="baseball data datavizualisation felix averlant statistics">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --font-sans: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif; }
+    </style>
+    <link rel="stylesheet" href="dist-cal/css/bundle.css">
+    <link rel="stylesheet" href="baseball-calendar-overrides.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Datavizualisation of baseball teams scores</h1>
+        <h2>Data from retrosheet.org (1921 to 2016)</h2>
+        <p class="desc">
+            For every year available, you'll have a detail for every game.<br>
+            <b>Colors go from red (lost) to green (win).</b><br>
+            Hover on each colored square to see the day of the game and score difference.
+        </p>
+        <p class="sub-title">Search and select a team:</p>
+        <div class="team-selector">
+            <!-- Hidden select for bundle compatibility (Chosen will init on empty if present) -->
+            <select class="chosen" data-placeholder="Choose a team..." style="display:none"><option></option></select>
+            <div class="team-picker-wrapper">
+                <input type="text" id="team-picker-input" class="team-picker-input" placeholder="Type to search teams..." autocomplete="off">
+                <div id="team-picker-dropdown" class="team-picker-dropdown">
+                    <div id="team-picker-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="viz"></div>
+
+    <script type="text/javascript" src="dist-cal/js/bundle.js"></script>
+    <script type="text/javascript" src="baseball-calendar-overrides.js"></script>
+</body>
+
+</html>

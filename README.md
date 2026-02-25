@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -16,21 +14,83 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy on GitHub Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is configured for static export (`output: 'export'`), making it compatible with GitHub Pages.
 
-## Learn More
+### Option 1: GitHub Actions (recommended)
 
-To learn more about Next.js, take a look at the following resources:
+1. Create `.github/workflows/deploy.yml` in your repo with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```yaml
+name: Deploy to GitHub Pages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+on:
+  push:
+    branches: [main, master]
 
-## Deploy on Vercel
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+2. In your GitHub repo, go to **Settings → Pages** and set the source to **GitHub Actions**.
+
+### Option 2: Manual deployment
+
+1. Build the project locally:
+   ```bash
+   yarn install
+   yarn build
+   ```
+
+2. The static site is generated in the `out` folder.
+
+3. Push the contents to a `gh-pages` branch (or use a tool like [gh-pages](https://www.npmjs.com/package/gh-pages)):
+   ```bash
+   npx gh-pages -d out
+   ```
+
+4. In your repo, go to **Settings → Pages** and select the `gh-pages` branch as the source.

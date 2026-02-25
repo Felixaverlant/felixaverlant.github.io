@@ -1,0 +1,172 @@
+/* Baseball Score Calendar - Match main site theme (Aegean #1a2f42, marble #f5f0e6) */
+:root {
+  --theme-bg: #1a2f42;
+  --theme-blue: #4a7c8e;
+  --theme-pink: #a67b5b;
+  --theme-mint: #5c7c4a;
+  --theme-dark: #f5f0e6;
+  --theme-hover: #e8c4a8;
+  --theme-terracotta: #c4622d;
+  --border-subtle: rgba(245, 240, 230, 0.3);
+}
+
+body {
+  background: var(--theme-bg) !important;
+  color: var(--theme-dark) !important;
+  font-family: var(--font-sans, 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif) !important;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Header - match site style */
+.header {
+  background: transparent !important;
+  padding: 40px 24px 32px !important;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header .back-link {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+  color: var(--theme-dark) !important;
+  text-align: left !important;
+  margin: 0 0 8px !important;
+}
+
+.header h2 {
+  font-size: 0.95rem !important;
+  font-weight: 400 !important;
+  color: var(--theme-dark);
+  opacity: 0.7;
+  text-align: left !important;
+  margin: 0 0 20px !important;
+}
+
+.header .desc {
+  color: var(--theme-dark) !important;
+  opacity: 0.85;
+  text-align: left !important;
+  line-height: 1.6 !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 24px !important;
+}
+
+.header .sub-title {
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: var(--theme-dark) !important;
+  text-align: left !important;
+  margin: 0 0 12px !important;
+}
+
+/* Hide original Chosen select */
+.team-selector .chosen-container,
+.team-selector select.chosen {
+  display: none !important;
+}
+
+/* Searchable team picker */
+.team-picker-wrapper {
+  position: relative;
+  max-width: 360px;
+}
+
+.team-picker-input {
+  width: 100%;
+  padding: 12px 40px 12px 14px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--theme-dark);
+  background: rgba(245, 240, 230, 0.12);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.team-picker-input::placeholder {
+  color: var(--theme-dark);
+  opacity: 0.5;
+}
+
+.team-picker-input:hover {
+  border-color: var(--theme-blue);
+  background: rgba(245, 240, 230, 0.18);
+}
+
+.team-picker-input:focus {
+  border-color: var(--theme-blue);
+  background: rgba(245, 240, 230, 0.2);
+  box-shadow: 0 0 0 2px rgba(74, 124, 142, 0.3);
+}
+
+.team-picker-input.has-value {
+  color: var(--theme-mint);
+}
+
+.team-picker-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 260px;
+  overflow-y: auto;
+  background: rgba(26, 47, 66, 0.98);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.team-picker-dropdown.open {
+  display: block;
+}
+
+.team-picker-option {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.team-picker-option:hover,
+.team-picker-option.highlighted {
+  background: rgba(245, 240, 230, 0.15);
+  color: var(--theme-hover);
+}
+
+.team-picker-option.no-results {
+  color: var(--theme-dark);
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Viz container */
+.viz {
+  text-align: left !important;
+  padding: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Calendar cells - visible on Aegean bg */
+.viz rect {
+  stroke: rgba(245, 240, 230, 0.2) !important;
+}
+
+.viz path {
+  stroke: rgba(245, 240, 230, 0.3) !important;
+}
+
+.viz text {
+  fill: var(--theme-dark) !important;
+  opacity: 0.8;
+}
+
+/* Back link */

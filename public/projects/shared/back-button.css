@@ -1,0 +1,58 @@
+/**
+ * Shared back button for all project pages.
+ * Edit this file only when changing the back button look.
+ *
+ * Uses !important so project-specific CSS (Bootstrap, global a {}, etc.)
+ * cannot override it — one file controls the button everywhere.
+ *
+ * Usage:
+ *   <a href="/" class="back-link">← Back to site</a>
+ *
+ * For fixed top bar (e.g. full-width bar at top of viewport):
+ *   <a href="/" class="back-link back-link--fixed">← Back to site</a>
+ *
+ * IMPORTANT: Load this stylesheet LAST in each project so it wins by cascade.
+ */
+
+.back-link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  width: 100% !important;
+  font-family: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 1.25rem !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  padding: 10px 18px !important;
+  margin-bottom: 1rem !important;
+  background: #fff !important;
+  background-color: #fff !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+  transition: background 0.2s, border-color 0.2s, color 0.2s !important;
+  box-sizing: border-box !important;
+}
+
+.back-link:hover {
+  background: #e8e4dc !important;
+  background-color: #e8e4dc !important;
+  border-color: rgba(0, 0, 0, 0.25) !important;
+  color: #000 !important;
+}
+
+/* Fixed full-width bar at top of viewport (e.g. Hip Hop Featurings) */
+.back-link.back-link--fixed {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 10000 !important;
+  margin-bottom: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0 !important;
+}

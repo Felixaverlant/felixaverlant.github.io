@@ -1,0 +1,197 @@
+/* Baseball Stats Comparator - Match main site theme (Aegean #1a2f42, marble #f5f0e6) */
+:root {
+  --theme-bg: #1a2f42;
+  --theme-blue: #4a7c8e;
+  --theme-pink: #a67b5b;
+  --theme-mint: #5c7c4a;
+  --theme-dark: #f5f0e6;
+  --theme-hover: #e8c4a8;
+  --theme-terracotta: #c4622d;
+  --border-subtle: rgba(245, 240, 230, 0.3);
+}
+
+body.container {
+  background: var(--theme-bg) !important;
+  color: var(--theme-dark) !important;
+  font-family: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Barlow on key elements (bundle may override body) */
+.main-container,
+.jumbotron,
+.btn-group button,
+#grid,
+#grid .header,
+#grid .row,
+.parcoords text,
+.parcoords .axis text {
+  font-family: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Back link */
+
+/* Header / jumbotron */
+.jumbotron.jumbotron-fluid {
+  background: transparent !important;
+  padding: 40px 24px 24px !important;
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+}
+
+.jumbotron h1 {
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+  color: var(--theme-dark) !important;
+  margin: 0 0 8px !important;
+}
+
+.jumbotron h2 {
+  font-size: 0.95rem !important;
+  font-weight: 400 !important;
+  color: var(--theme-dark) !important;
+  opacity: 0.7;
+  margin: 0 !important;
+}
+
+/* Main content */
+.main-container {
+  padding: 0 24px 40px !important;
+  max-width: 1440px;
+  margin: 0 auto !important;
+}
+
+/* Button groups - transparent/same as main background */
+.main-container .btn-group-justified,
+.main-container .btn-group {
+  background: transparent !important;
+}
+
+/* Position buttons - same background as page, bordered */
+.main-container .btn-group-justified button,
+.main-container .btn-group button,
+.main-container button.position-selection-button,
+.main-container .btn-default.position-selection-button,
+.main-container .btn-group .btn.position-selection-button,
+.btn-group-justified button,
+.btn-group-justified .btn-group button,
+.btn-group button.position-selection-button,
+.btn-group .btn,
+button.btn-default.position-selection-button {
+  background: var(--theme-bg) !important;
+  background-color: var(--theme-bg) !important;
+  background-image: none !important;
+  border: 1px solid rgba(245, 240, 230, 0.4) !important;
+  color: var(--theme-dark) !important;
+  text-shadow: none !important;
+}
+
+.main-container .btn-group-justified button:hover,
+.main-container .btn-group button:hover,
+.main-container button.position-selection-button:hover,
+.main-container .btn-default.position-selection-button:hover,
+.btn-group-justified button:hover,
+.btn-group button.position-selection-button:hover,
+button.btn-default.position-selection-button:hover {
+  background: var(--theme-bg) !important;
+  background-color: var(--theme-bg) !important;
+  border-color: var(--theme-blue) !important;
+  color: var(--theme-hover) !important;
+}
+
+.main-container .btn-group-justified button.active,
+.main-container .btn-group button.active,
+.main-container button.position-selection-button.active,
+.main-container .btn-default.position-selection-button.active,
+.btn-group-justified button.active,
+.btn-group button.position-selection-button.active,
+button.btn-default.position-selection-button.active {
+  background: var(--theme-bg) !important;
+  background-color: var(--theme-bg) !important;
+  border-color: var(--theme-blue) !important;
+  color: var(--theme-mint) !important;
+}
+
+/* Parcoords canvas / svg */
+.parcoords,
+#example {
+  background: transparent !important;
+}
+
+.parcoords svg text,
+.parcoords .axis text {
+  fill: var(--theme-dark) !important;
+}
+
+.parcoords .axis line,
+.parcoords .axis path {
+  stroke: var(--border-subtle) !important;
+}
+
+/* Ensure parent doesn't constrain grid height */
+.main-container .col-md-12 {
+  min-height: auto !important;
+}
+
+/* Grid - force 3x height: explicit container height (default ~300px → 900px) */
+body.container .main-container #grid,
+#grid {
+  color: var(--theme-dark) !important;
+  min-height: 900px !important;
+  height: 900px !important;
+  max-height: 900px !important;
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+}
+
+/* All rows same color - override parcoords highlight/dim styling */
+#grid .row,
+#grid .row:hover,
+#grid .row.dim,
+#grid .row.dimmed,
+#grid .row.highlight,
+#grid .row[style] {
+  background: rgba(245, 240, 230, 0.08) !important;
+  color: var(--theme-dark) !important;
+  opacity: 1 !important;
+}
+
+/* Row cells - ensure consistent styling */
+#grid .row .cell {
+  background: transparent !important;
+}
+
+/* Make each row 3x taller (default 18px → 72px) - override divgrid's .row height */
+#grid .row {
+  min-height: 72px !important;
+  height: 72px !important;
+  line-height: 72px !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  clear: none !important;
+}
+
+#grid .row .cell,
+#grid .header .cell {
+  line-height: 1.4 !important;
+  padding: 0 8px !important;
+  float: none !important; /* override divgrid float for flex layout */
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Header row - match same color, 3x height */
+#grid .header {
+  background: rgba(245, 240, 230, 0.12) !important;
+  min-height: 72px !important;
+  height: 72px !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  clear: none !important;
+}
+
+/* Hide scrollbars when table is empty (no rows) */
+#grid:not(:has(.row)) {
+  overflow: hidden !important;
+}

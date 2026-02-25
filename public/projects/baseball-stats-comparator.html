@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compare baseball players stats visually | Félix Averlant</title>
+    <meta name="description" content="Compare baseball players stats visually">
+    <meta name="keywords" content="baseball data datavizualisation felix averlant statistics">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/bundle.css">
+    <link rel="stylesheet" href="baseball-stats-comparator-overrides.css">
+    <script type="text/javascript" src="dist/js/bundle.js"></script>
+</head>
+
+<body class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>Baseball compare</h1>
+            <h2>Compare baseball players stats visually</h2>
+        </div>
+
+    </div>
+    <div class="main-container">
+        <div class="row">
+            <div class="col-md-12 btn-group btn-group-justified">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default position-selection-button">Pitchers</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default position-selection-button">Batters</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default position-selection-button">C</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default position-selection-button">1B</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default position-selection-button">2B</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default position-selection-button">3B</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default position-selection-button">SS</button>
+                </div>
+                <div class="btn-group" role="group">
+
+                    <button type="button" class="btn btn-default position-selection-button">OF</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default position-selection-button">DH</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <div id="example" class="parcoords"></div>
+            <div id="grid" style="min-height: 900px; height: 900px; overflow-y: auto;"></div>
+        </div>
+    </div>
+</body>
+
+</html>

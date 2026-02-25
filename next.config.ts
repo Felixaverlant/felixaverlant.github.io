@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export',
+  compress: true,
+  images: {
+    unoptimized: true,
+  },
+  experimental: {
+    optimizePackageImports: ['tailwind-merge'],
+  },
 };
 
 export default nextConfig;

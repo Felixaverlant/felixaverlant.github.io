@@ -1,7 +1,7 @@
 'use client';
 
-import { ParallaxProvider } from 'react-scroll-parallax';
+import { LanguageProvider } from './contexts/LanguageContext';
 
-export function Providers({ children }: { children: React.ReactNode }) {
-  return <ParallaxProvider>{children}</ParallaxProvider>;
+export function Providers({ children, lang }: { children: React.ReactNode; lang: 'fr' | 'en' }) {
+  return <LanguageProvider initialLang={lang}>{children}</LanguageProvider>;
 }
