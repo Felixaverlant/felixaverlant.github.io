@@ -124,6 +124,7 @@ export default async function LangLayout({
   const resolvedParams = await resolveParams(params);
   const lang: Lang = resolveLang(resolvedParams);
   const structuredData = generateStructuredData(lang);
+  const isProduction = process.env.NODE_ENV === 'production'
 
   return (
     <html lang={lang} suppressHydrationWarning>
@@ -131,29 +132,33 @@ export default async function LangLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1a2f42" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        {isProduction && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WB4X5Q6');`,
-          }}
-        />
+            }}
+          />
+        )}
       </head>
       <body
         className={twMerge(`${barlow.variable} antialiased font-sans bg-theme-bg text-theme-dark`)}
         style={{ backgroundColor: '#1a2f42', color: '#f5f0e6' }}
       >
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WB4X5Q6"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-            title="Google Tag Manager"
-          />
-        </noscript>
+        {isProduction && (
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-WB4X5Q6"
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+              title="Google Tag Manager"
+            />
+          </noscript>
+        )}
         <LangTemplate>
           <script
             type="application/ld+json"

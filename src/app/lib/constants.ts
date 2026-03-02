@@ -20,7 +20,7 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     company: { fr: 'SustainSoft', en: 'SustainSoft' },
-    companyType: { fr: 'SaaS B2B', en: 'SaaS B2B' },
+    companyType: { fr: 'SaaS B2B - GreenTech', en: 'SaaS B2B - GreenTech' },
     role: { fr: 'Co-founder & CPTO', en: 'Co-founder & CPTO' },
     location: { fr: 'Remote', en: 'Remote' },
     period: { fr: '2021 - 2026', en: '2021 - 2026' },
@@ -50,7 +50,7 @@ export const experiences: Experience[] = [
   },
   {
     company: { fr: 'Adot (acq. by Veepee)', en: 'Adot (acq. by Veepee)' },
-    companyType: { fr: 'AdTech', en: 'AdTech' },
+    companyType: { fr: 'SaaS B2B - AdTech', en: 'SaaS B2B - AdTech' },
     role: { fr: 'Head of Product', en: 'Head of Product' },
     location: { fr: 'Paris, France', en: 'Paris, France' },
     period: { fr: '2017 - 2021', en: '2017 - 2021' },

@@ -6,7 +6,7 @@ export const translations = {
     bioHeadingCta: "Disponible.",
     contactMe: 'Contactez-moi !',
     aboutMe: {
-      text: 'Ex-fondateur, 15 ans dans la tech — de la startup à la scale-up. Plusieurs expériences en B2B SaaS, AdTech & e‑commerce sur le produit, UX et le delivery. J’anime la vision produit avec les parties prenantes, challenge l’existant et suis les équipes jusqu’à la livraison.' ,
+      text: 'Ex-fondateur, 15 ans dans la tech — de la startup à la scale-up. Plusieurs expériences en B2B SaaS, AdTech & e‑commerce sur le produit, UX et le delivery. J\'aime résoudre des problèmes complexes avec des solutions simples et modulaires en m\'inspirant de domaines variés. J’anime la vision produit avec les parties prenantes, challenge l’existant et suis les équipes jusqu’à la livraison.' ,
       aboutLink: 'En savoir plus',
       ctaLinkedIn: 'LinkedIn',
       ctaCv: 'CV (PDF)',
@@ -58,7 +58,7 @@ export const translations = {
     bioHeadingCta: "Open to work.",
     contactMe: 'Contact me',
     aboutMe: {
-      text: "CPO and former founder, 15 years in tech. I lead product from idea to delivery: specs, wireframes, and close to the code. I've led product, UX and delivery teams from startup to scale-up.",
+      text: "Former founder, 15 years in tech — from startup to scale-up. Several experiences in B2B SaaS, AdTech & e-commerce in product, UX and delivery. I like solving complex problems with simple, modular solutions, drawing inspiration from varied domains. I drive the product vision with stakeholders, challenge the status quo and follow teams through to delivery.",
       aboutLink: 'Learn more',
       ctaLinkedIn: 'LinkedIn',
       ctaCv: 'CV (PDF)',
