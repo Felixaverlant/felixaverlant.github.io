@@ -202,8 +202,8 @@ export const skills: Skill[] = [
     category: { fr: 'Produit & delivery', en: 'Product & delivery' },
     items: [
       {
-        fr: 'Stratégie produit, roadmap et specs (BMAD, AI-assisted specs)',
-        en: 'Product strategy, roadmap and specs (BMAD, AI-assisted requirements)',
+        fr: 'Stratégie produit, roadmap et specs (BMAD, spec-kit, agent-OS)',
+        en: 'Product strategy, roadmap and specs (BMAD, spec-kit, agent-OS)',
       },
       {
         fr: 'User research, discovery, feedback et interviews',
