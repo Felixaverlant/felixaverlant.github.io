@@ -2,11 +2,11 @@ export const translations = {
   fr: {
     nameFirst: 'Félix',
     nameLast: 'Averlant',
-    title: "Félix Averlant - CPO | Chief Product Officer | France, UK, Suisse, US, Canada",
+    title: "Félix Averlant - CPO | Chief Product Officer | Product manager",
     bioHeadingCta: "Disponible.",
     contactMe: 'Contactez-moi !',
     aboutMe: {
-      text: 'Ex-fondateur, 15 ans dans la tech — de la startup à la scale-up. Plusieurs expériences en B2B SaaS, AdTech & e‑commerce sur le produit, UX et le delivery. J\'aime résoudre des problèmes complexes avec des solutions simples et modulaires en m\'inspirant de domaines variés. J’anime la vision produit avec les parties prenantes, challenge l’existant et suis les équipes jusqu’à la livraison.' ,
+      text: 'Ex-fondateur, 15 ans dans la tech — de la startup à la scale-up. Plusieurs expériences en B2B SaaS, AdTech, IA & e‑commerce sur le produit, UX et le delivery. J\'aime résoudre des problèmes complexes avec des solutions simples et modulaires en m\'inspirant de domaines variés. J’anime la vision produit avec les parties prenantes, challenge l’existant et suis les équipes jusqu’à la livraison.' ,
       aboutLink: 'En savoir plus',
       ctaLinkedIn: 'LinkedIn',
       ctaCv: 'CV (PDF)',
@@ -15,7 +15,7 @@ export const translations = {
       whoIAm:
         "CPO et ex-fondateur, formation d’ingénieur. J'ai appris en 15 ans la majeure partie de la chaîne de la valeur. Du problème au produit livré : stratégie et specs produit, wireframes et design system, et assez de tech pour comprendre et utiliser cela pour résoudre les problèmes avec la solution la plus pertinente. J’aime résoudre des problèmes complexes par des solutions simples et modulaires. J’ai dirigé des équipes produit, tech et UX, de la startup au scale-up.",
       whatIWant:
-        "Je cherche mon prochain poste comme CPO, Head of Product ou premier product manager. J'aime structurer une vision produit avec les parties prenantes, challenger l'existant et suivre les équipes dans la livraison afin de rester proche des réalités. Préférence pour le remote mais pas fermé à me rapprocher, que ce soit en France, UK, Suisse, US ou Canada.",
+        "Je cherche mon prochain poste comme CPO, Head of Product ou premier product manager. J'aime structurer une vision produit avec les parties prenantes, challenger l'existant et suivre les équipes dans la livraison afin de rester proche des réalités. Préférence pour le remote mais mobile, que ce soit en France, UK, Suisse, US ou Canada.",
     },
     experience: {
       title: 'Expériences',
@@ -41,6 +41,9 @@ export const translations = {
     education: {
       title: 'Formations',
     },
+    languages: {
+      title: 'Langues',
+    },
     skills: {
       title: 'Compétences',
     },
@@ -54,11 +57,11 @@ export const translations = {
   en: {
     nameFirst: 'Félix',
     nameLast: 'Averlant',
-    title: "Félix Averlant - CPO | Chief Product Officer | France, UK, Switzerland, US, Canada",
+    title: "Félix Averlant - CPO | Chief Product Officer | Product manager",
     bioHeadingCta: "Open to work.",
     contactMe: 'Contact me',
     aboutMe: {
-      text: "Former founder, 15 years in tech — from startup to scale-up. Several experiences in B2B SaaS, AdTech & e-commerce in product, UX and delivery. I like solving complex problems with simple, modular solutions, drawing inspiration from varied domains. I drive the product vision with stakeholders, challenge the status quo and follow teams through to delivery.",
+      text: "Former founder, 15 years in tech — from startup to scale-up. Several experiences in B2B SaaS, AdTech, IA & e-commerce in product, UX and delivery. I like solving complex problems with simple, modular solutions, drawing inspiration from varied domains. I drive the product vision with stakeholders, challenge the status quo and follow teams through to delivery.",
       aboutLink: 'Learn more',
       ctaLinkedIn: 'LinkedIn',
       ctaCv: 'CV (PDF)',
@@ -92,6 +95,9 @@ export const translations = {
     },
     education: {
       title: 'Education',
+    },
+    languages: {
+      title: 'Languages',
     },
     skills: {
       title: 'Skills',

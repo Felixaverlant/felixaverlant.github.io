@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
       {
         category: { fr: 'Tech', en: 'Tech' },
         items: [
-          { fr: "Construction et opération du SaaS B2B de A à Z (solo) : auth, infra, front/back end, DB, CI/CD...", en: 'Built and operated B2B SaaS end-to-end (solo): auth, infra, front/back end, DB, CI/CD' },
+          { fr: "Construction et opération du SaaS B2B de A à Z (solo) : auth, infra, front/back end, AI, DB, CI/CD...", en: 'Built and operated B2B SaaS end-to-end (solo): auth, infra, front/back end, AI, DB, CI/CD' },
           { fr: "Recrutement et direction de l'équipe tech et produit / définition des rôles, rituels de delivery...", en: 'Recruited and led tech and product team / defined roles, hiring bar and delivery rituals' },
         ],
       },
@@ -180,9 +180,15 @@ export const educations: Education[] = [
   },
 ];
 
+export interface SkillSubsection {
+  title: Bilingual;
+  items: Bilingual[];
+}
+
 export interface Skill {
   category: Bilingual;
-  items: Bilingual[];
+  items?: Bilingual[];
+  subsections?: SkillSubsection[];
 }
 
 export interface Interest {
@@ -192,9 +198,13 @@ export interface Interest {
 
 export const interests: Interest[] = [
   { fr: 'Lire / Écrire', en: 'Reading / Writing' },
-  { fr: 'E-sports', en: 'E-sports' },
   { fr: 'MAO / DAO', en: 'MAO / DAO' },
   { fr: 'Escalade', en: 'Climbing' },
+];
+
+export const languages: Bilingual[] = [
+  { fr: 'Français — langue maternelle', en: 'French — mother tongue' },
+  { fr: 'Anglais — maîtrise professionnelle', en: 'English — professional proficiency' },
 ];
 
 export const skills: Skill[] = [
@@ -202,45 +212,66 @@ export const skills: Skill[] = [
     category: { fr: 'Produit & delivery', en: 'Product & delivery' },
     items: [
       {
-        fr: 'Stratégie produit, roadmap et specs (BMAD, spec-kit, agent-OS)',
-        en: 'Product strategy, roadmap and specs (BMAD, spec-kit, agent-OS)',
+        fr: 'Stratégie / Roadmap / Tech & UX Specs',
+        en: 'Strategy / Roadmap / Tech & UX Specs',
       },
       {
-        fr: 'User research, discovery, feedback et interviews',
-        en: 'User research, discovery, feedback and interviews',
+        fr: 'User research / Discovery / Feedback / Interviews',
+        en: 'User research / Discovery / Feedback / Interviews',
       },
       {
-        fr: 'SCRUM / Kanban / sprint planning / priorisation du backlog',
-        en: 'SCRUM / Kanban / sprint planning / backlog prioritization',
+        fr: 'Sprint planning / SCRUM / Kanban / Prio backlog',
+        en: 'Sprint planning / SCRUM / Kanban / Backlog prioritization',
       },
       {
-        fr: 'Alignement parties prenantes, mitigation des risques, delivery cross-fonctionnelle',
-        en: 'Stakeholder alignment, risk mitigation, cross-functional delivery',
+        fr: 'Alignement parties prenantes / Mitigation des risques',
+        en: 'Stakeholder alignment / Risk mitigation',
+      },
+      {
+        fr: 'Delivery cross-fonctionnelle',
+        en: 'Cross-functional delivery',
       },
     ],
   },
   {
-    category: { fr: 'Tech & data', en: 'Tech & data' },
+    category: { fr: 'IA', en: 'AI' },
     items: [
       {
-        fr: 'Javascript / Typescript / React',
-        en: 'Javascript / Typescript / React',
+        fr: 'Prompt engineering / ReAct patterns',
+        en: 'Prompt engineering / ReAct patterns',
       },
       {
-        fr: 'Next.js / Nest.js',
-        en: 'Next.js / Nest.js',
+        fr: 'MCP server & client / RAG',
+        en: 'MCP server & client / RAG',
+      },
+      {
+        fr: 'Agent architecture',
+        en: 'Agent architecture',
+      },
+      {
+        fr: 'Evaluation / Tracing',
+        en: 'Evaluation / Tracing',
+      },
+      {
+        fr: 'AI UX Patterns / A/B testing prompts / acceptance thresholds / Quality dashboards / Failure mode design',
+        en: 'AI UX Patterns / A/B testing prompts / acceptance thresholds / Quality dashboards / Failure mode design',
+      },
+    ],
+  },
+  {
+    category: { fr: 'Tech', en: 'Tech' },
+    items: [
+      {
+        fr: 'Javascript / Typescript / React / Next.js',
+        en: 'Javascript / Typescript / React / Next.js',
       },
       {
         fr: 'Storybook / Playwright / Algolia',
         en: 'Storybook / Playwright / Algolia',
       },
       {
-        fr: 'GraphQl / SQL / NoSQL',
-        en: 'GraphQl / SQL / NoSQL',
-      },
-      {
-        fr: 'Vibe coding / prompt engineering',
-        en: 'Vibe coding / prompt engineering',
+        fr: 'GraphQl / SQL / NoSQL / Gcloud / Sentry',
+        en: 'GraphQl / SQL / NoSQL / Gcloud / Sentry',
       },
     ],
   },
@@ -263,13 +294,26 @@ export const skills: Skill[] = [
   },
   {
     category: { fr: 'Software', en: 'Software' },
-    items: [
-      { fr: 'Figma / Blender', en: 'Figma / Blender' },
-      { fr: 'Notion / Atlassian', en: 'Notion / Atlassian' },
-      { fr: 'Obsidian / Office', en: 'Obsidian / Office' },
-      { fr: 'Tableau / GA / GTM', en: 'Tableau / GA / GTM' },
-      { fr: 'Gcloud / Sentry', en: 'Gcloud / Sentry' },
-      { fr: 'Cursor / Warp', en: 'Cursor / Warp' },
+    subsections: [
+      {
+        title: { fr: 'IA', en: 'AI' },
+        items: [
+          { fr: 'Claude', en: 'Claude' },
+          { fr: 'LangChain / LangFuse', en: 'LangChain / LangFuse' },
+          { fr: 'Vellum / OpenClaw', en: 'Vellum / OpenClaw' },
+          { fr: 'BMAD / agent-OS', en: 'BMAD / agent-OS' },
+        ],
+      },
+      {
+        title: { fr: 'PM/PO', en: 'PM/PO' },
+        items: [
+          { fr: 'Productboard', en: 'Productboard' },
+          { fr: 'Notion / Atlassian', en: 'Notion / Atlassian' },
+          { fr: 'Obsidian / Office', en: 'Obsidian / Office' },
+          { fr: 'Tableau / GA / GTM', en: 'Tableau / GA / GTM' },
+          { fr: 'Figma', en: 'Figma' },
+        ],
+      },
     ],
   },
 ];

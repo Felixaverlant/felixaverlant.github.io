@@ -10,9 +10,9 @@ type SimpleListSectionProps = {
   ariaLabel: string;
   items: string[] | TranslatableItem[];
   lang: Lang;
-  fractalVariant?: 'tree' | 'dragon3' | 'dragon4' | 'dragon5' | 'fibonacci10' | 'koch';
-  fractalAngleDeg?: number;
+  fractalVariant?: 'fibonacci';
   fractalRotationDeg?: number;
+  fractalSteps?: number;
   headingNoDivider?: boolean;
 };
 
@@ -20,9 +20,9 @@ function isTranslatable(item: string | TranslatableItem): item is TranslatableIt
   return typeof item === 'object' && item !== null && 'fr' in item && 'en' in item;
 }
 
-export default function SimpleListSection({ title, ariaLabel, items, lang, fractalVariant, fractalAngleDeg, fractalRotationDeg, headingNoDivider }: SimpleListSectionProps) {
+export default function SimpleListSection({ title, ariaLabel, items, lang, fractalVariant, fractalRotationDeg, fractalSteps, headingNoDivider }: SimpleListSectionProps) {
   return (
-    <Section title={title} ariaLabel={ariaLabel} fractalVariant={fractalVariant} fractalAngleDeg={fractalAngleDeg} fractalRotationDeg={fractalRotationDeg} headingNoDivider={headingNoDivider}>
+    <Section title={title} ariaLabel={ariaLabel} fractalVariant={fractalVariant} fractalRotationDeg={fractalRotationDeg} fractalSteps={fractalSteps} headingNoDivider={headingNoDivider}>
       <ul className="list-disc pl-5 space-y-1 text-lg md:text-xl text-theme-dark/85 mt-4 pointer-events-none">
         {items.map((item, index) => {
           const text = isTranslatable(item) ? item[lang] : item

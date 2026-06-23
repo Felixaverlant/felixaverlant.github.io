@@ -12,8 +12,8 @@ type SectionProps = {
   headingClassName?: string
   variant?: 'default' | 'compact'
   fractalVariant?: FractalVariant
-  fractalAngleDeg?: number
   fractalRotationDeg?: number
+  fractalSteps?: number
   headingNoDivider?: boolean
   animatedDivider?: boolean
   firstSection?: boolean
@@ -28,17 +28,18 @@ export default function Section({
   headingClassName,
   variant = 'default',
   fractalVariant,
-  fractalAngleDeg,
   fractalRotationDeg,
+  fractalSteps,
   headingNoDivider,
   animatedDivider,
   firstSection = false,
 }: SectionProps) {
-  const marginTop = firstSection ? '' : ' mt-[100px]'
+  const showFractal = fractalVariant != null
+  // When a fractal is present, the inflow wrapper supplies the inter-section gap
+  // (with the fractal centered in it), so the extra top margin is dropped to keep
+  // equal vertical spacing before and after the fractal.
+  const marginTop = firstSection || showFractal ? '' : ' mt-[100px]'
   const sectionClasses = `w-full pointer-events-none${marginTop}`
-
-  const showFractal = fractalVariant !== undefined && fractalVariant !== null ||
-    (fractalAngleDeg !== undefined && fractalAngleDeg !== null)
 
   return (
     <section className={`${sectionClasses} ${className}`.trim()} aria-label={ariaLabel}>
@@ -46,10 +47,10 @@ export default function Section({
         <div className="fractal-wrapper--section-inflow">
           <FractalBackground
             className="fractal-wrapper--section"
-            variant={fractalVariant ?? 'tree'}
-            angleDeg={fractalAngleDeg ?? 60}
+            variant={fractalVariant ?? 'fibonacci'}
             rotationDeg={fractalRotationDeg ?? 0}
-            align="left"
+            steps={fractalSteps}
+            align="center"
           />
         </div>
       )}

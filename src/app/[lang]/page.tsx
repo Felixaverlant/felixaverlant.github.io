@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import HeaderToggles from '../components/HeaderToggles';
 import ExperienceSection from '../components/ExperienceSection';
 import EducationSection from '../components/EducationSection';
@@ -11,7 +10,7 @@ import AboutParagraph from '../components/AboutParagraph';
 import AnimatedDivider from '../components/AnimatedDivider';
 import PageLayout from '../components/PageLayout';
 import { translations } from '../lib/translations';
-import { SITE_URL, PROFILE_IMAGE, interests } from '../lib/constants';
+import { SITE_URL, PROFILE_IMAGE, interests, languages } from '../lib/constants';
 import { resolveLang, resolveParams, type Lang } from '../lib/utils';
 import { withLangMetadata } from '../lib/metadata';
 
@@ -51,12 +50,12 @@ export default async function Home({ params }: { params: { lang: Lang } | Promis
               <div className="flex flex-col flex-1 min-w-0">
                 <div className="flex items-baseline justify-between gap-4 min-w-0">
                   <h1 className="text-2xl md:text-3xl font-normal text-theme-dark leading-tight">
-                    {t.nameFirst} {t.nameLast},
+                    {t.nameFirst} {t.nameLast}<span className="text-theme-yellow">/</span>
                   </h1>
                   <HeaderToggles currentLang={lang} position="relative" />
                 </div>
                 <p className="text-lg md:text-xl font-normal text-theme-dark/60 leading-tight mt-1">
-                  Chief Product Officer
+                  Chief Product Officer | IA enthusiast
                 </p>
               </div>
             </div>
@@ -93,19 +92,29 @@ export default async function Home({ params }: { params: { lang: Lang } | Promis
 
             <div id="content" className="lg:col-span-2 pt-8 lg:pt-0 pb-12 md:pb-20 relative" role="region" aria-label={lang === 'fr' ? 'Parcours et compétences' : 'Experience and skills'}>
               <ExperienceSection lang={lang} firstSection />
-              <SkillsSection lang={lang} fractalVariant="dragon3" headingNoDivider />
-              <EducationSection lang={lang} fractalVariant="dragon3" headingNoDivider />
-              <PublicationsSection lang={lang} fractalVariant="dragon4" headingNoDivider />
-              <ProjectsSection lang={lang} fractalVariant="dragon5" headingNoDivider />
+              <SkillsSection lang={lang} fractalVariant="fibonacci" fractalSteps={21} headingNoDivider />
+              <EducationSection lang={lang} fractalVariant="fibonacci" fractalSteps={34} headingNoDivider />
+              <SimpleListSection
+                title={t.languages.title}
+                ariaLabel={t.languages.title}
+                items={languages}
+                lang={lang}
+                fractalVariant="fibonacci"
+                fractalSteps={55}
+                headingNoDivider
+              />
+              <PublicationsSection lang={lang} fractalVariant="fibonacci" fractalSteps={89} headingNoDivider />
+              <ProjectsSection lang={lang} fractalVariant="fibonacci" fractalSteps={144} headingNoDivider />
               <SimpleListSection
                 title={t.interests.title}
                 ariaLabel={t.interests.title}
                 items={interests}
                 lang={lang}
-                fractalVariant="fibonacci10"
+                fractalVariant="fibonacci"
+                fractalSteps={233}
                 headingNoDivider
               />
-              <SideProjectsSection lang={lang} fractalVariant="koch" headingNoDivider />
+              <SideProjectsSection lang={lang} fractalVariant="fibonacci" fractalSteps={377} headingNoDivider />
             </div>
           </div>
           </div>

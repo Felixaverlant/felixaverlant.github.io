@@ -9,7 +9,7 @@ const INITIAL_COUNT = 3;
 const REVEAL_DURATION_MS = 450;
 const STAGGER_MS = 80;
 
-export default function PublicationsSection({ lang, fractalVariant, fractalAngleDeg, fractalRotationDeg, headingNoDivider }: { lang: 'fr' | 'en'; fractalVariant?: 'tree' | 'dragon3' | 'dragon4' | 'dragon5' | 'fibonacci10' | 'koch'; fractalAngleDeg?: number; fractalRotationDeg?: number; headingNoDivider?: boolean }) {
+export default function PublicationsSection({ lang, fractalVariant, fractalRotationDeg, fractalSteps, headingNoDivider }: { lang: 'fr' | 'en'; fractalVariant?: 'fibonacci'; fractalRotationDeg?: number; fractalSteps?: number; headingNoDivider?: boolean }) {
   const t = translations[lang];
   const [showAll, setShowAll] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
@@ -35,7 +35,7 @@ export default function PublicationsSection({ lang, fractalVariant, fractalAngle
   const isHiding = isExiting;
 
   return (
-    <Section title={t.publications.title} ariaLabel={t.publications.title} fractalVariant={fractalVariant} fractalAngleDeg={fractalAngleDeg} fractalRotationDeg={fractalRotationDeg} headingNoDivider={headingNoDivider}>
+    <Section title={t.publications.title} ariaLabel={t.publications.title} fractalVariant={fractalVariant} fractalRotationDeg={fractalRotationDeg} fractalSteps={fractalSteps} headingNoDivider={headingNoDivider}>
       <p className="text-base md:text-lg text-theme-dark/85 leading-relaxed pointer-events-none">
         {t.publications.description}
       </p>

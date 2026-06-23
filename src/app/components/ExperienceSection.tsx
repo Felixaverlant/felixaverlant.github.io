@@ -5,11 +5,11 @@ import { translations } from '../lib/translations';
 import Section from './Section';
 import ExternalLinkIcon from './ExternalLinkIcon';
 
-export default function ExperienceSection({ lang, fractalAngleDeg, fractalRotationDeg, firstSection }: { lang: 'fr' | 'en'; fractalAngleDeg?: number; fractalRotationDeg?: number; firstSection?: boolean }) {
+export default function ExperienceSection({ lang, fractalRotationDeg, firstSection }: { lang: 'fr' | 'en'; fractalRotationDeg?: number; firstSection?: boolean }) {
   const t = translations[lang];
 
   return (
-    <Section title={t.experience.title} ariaLabel={t.experience.title} variant="compact" fractalAngleDeg={fractalAngleDeg} fractalRotationDeg={fractalRotationDeg} animatedDivider firstSection={firstSection}>
+    <Section title={t.experience.title} ariaLabel={t.experience.title} variant="compact" fractalRotationDeg={fractalRotationDeg} animatedDivider firstSection={firstSection}>
       <div>
         {experiences.map((exp, index) => (
           <div key={index} className="py-12 first:pt-6 pointer-events-auto">

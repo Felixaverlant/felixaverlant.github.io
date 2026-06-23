@@ -43,12 +43,12 @@ const sideProjectsList = projects
   .filter((p) => !p.url.includes('sustainsoft'))
   .sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
 
-export default function ProjectsSection({ lang, fractalVariant, fractalAngleDeg, fractalRotationDeg, headingNoDivider }: { lang: 'fr' | 'en'; fractalVariant?: 'tree' | 'dragon3' | 'dragon4' | 'dragon5' | 'fibonacci10' | 'koch'; fractalAngleDeg?: number; fractalRotationDeg?: number; headingNoDivider?: boolean }) {
+export default function ProjectsSection({ lang, fractalVariant, fractalRotationDeg, fractalSteps, headingNoDivider }: { lang: 'fr' | 'en'; fractalVariant?: 'fibonacci'; fractalRotationDeg?: number; fractalSteps?: number; headingNoDivider?: boolean }) {
   const t = translations[lang];
   const sustainsoft = projects.find((p) => p.url.includes('sustainsoft'));
 
   return (
-    <Section title={t.projects.title} ariaLabel={t.projects.title} fractalVariant={fractalVariant} fractalAngleDeg={fractalAngleDeg} fractalRotationDeg={fractalRotationDeg} headingNoDivider={headingNoDivider}>
+    <Section title={t.projects.title} ariaLabel={t.projects.title} fractalVariant={fractalVariant} fractalRotationDeg={fractalRotationDeg} fractalSteps={fractalSteps} headingNoDivider={headingNoDivider}>
       <div>
         {sustainsoft && <ProjectCard key="sustainsoft" project={sustainsoft} lang={lang} />}
       </div>
@@ -58,7 +58,7 @@ export default function ProjectsSection({ lang, fractalVariant, fractalAngleDeg,
 
 const GITHUB_URL = 'https://github.com/Felixaverlant';
 
-export function SideProjectsSection({ lang, fractalVariant, fractalAngleDeg, fractalRotationDeg, headingNoDivider }: { lang: 'fr' | 'en'; fractalVariant?: 'tree' | 'dragon3' | 'dragon4' | 'dragon5' | 'fibonacci10' | 'koch'; fractalAngleDeg?: number; fractalRotationDeg?: number; headingNoDivider?: boolean }) {
+export function SideProjectsSection({ lang, fractalVariant, fractalRotationDeg, fractalSteps, headingNoDivider }: { lang: 'fr' | 'en'; fractalVariant?: 'fibonacci'; fractalRotationDeg?: number; fractalSteps?: number; headingNoDivider?: boolean }) {
   const t = translations[lang];
   const githubLink = (
     <a
@@ -72,7 +72,7 @@ export function SideProjectsSection({ lang, fractalVariant, fractalAngleDeg, fra
     </a>
   );
   return (
-    <Section title={t.projects.sideProjects} titleAfterSlash={githubLink} ariaLabel={t.projects.sideProjects} fractalVariant={fractalVariant} fractalAngleDeg={fractalAngleDeg} fractalRotationDeg={fractalRotationDeg} headingNoDivider={headingNoDivider}>
+    <Section title={t.projects.sideProjects} titleAfterSlash={githubLink} ariaLabel={t.projects.sideProjects} fractalVariant={fractalVariant} fractalRotationDeg={fractalRotationDeg} fractalSteps={fractalSteps} headingNoDivider={headingNoDivider}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
         {sideProjectsList.map((project, index) => (
           <ProjectCard key={index} project={project} lang={lang} showYear />
