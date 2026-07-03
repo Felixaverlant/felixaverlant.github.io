@@ -31,3 +31,23 @@ yarn-error.log*
 # Vercel
 .vercel
 
+# Resume: tailored per-application PDFs + LaTeX artifacts are ignored
+# (each application's resume-structured.md and job-description.md stay tracked).
+# The BASE PDFs public/resume-en.pdf and public/resume-fr.pdf are intentionally committed:
+# the website serves them and GitHub Pages deploys committed files.
+resume-generator/**/*.pdf
+resume-generator/**/*.tex
+public/resume-*.tex
+resume-generator/**/*.aux
+resume-generator/**/*.log
+resume-generator/**/*.out
+resume-generator/**/*.fls
+resume-generator/**/*.fdb_latexmk
+resume-generator/**/*.xdv
+public/resume-*.aux
+public/resume-*.log
+public/resume-*.out
+public/resume-*.fls
+public/resume-*.fdb_latexmk
+public/resume-*.xdv
+

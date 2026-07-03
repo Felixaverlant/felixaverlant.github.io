@@ -14,6 +14,46 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Generating a resume (ATS PDF, EN / FR)
+
+Resume content lives in one bilingual master: `public/resume-structured.md`
+(format rules are documented at the top of that file). It compiles to ATS-valid PDFs via
+moderncv + XeLaTeX. The base PDFs are written to `public/` because the website serves them.
+
+**One-time setup** (TeX toolchain — only needed once):
+
+```bash
+brew install --cask basictex
+# then, in a new shell (installs the LaTeX packages the template needs):
+sudo /Library/TeX/texbin/tlmgr update --self
+sudo /Library/TeX/texbin/tlmgr install moderncv latexmk fontspec fontawesome6 academicons geometry marvosym
+```
+
+> The TeX binaries live at `/Library/TeX/texbin`. If a command reports `xelatex not found`,
+> add that folder to your `PATH` (e.g. prefix a command with `PATH="/Library/TeX/texbin:$PATH"`).
+
+**Base resume** (the default, non-tailored CV — regenerates from the master):
+
+```bash
+yarn resume          # both languages
+yarn resume:en       # English only
+yarn resume:fr       # French only
+```
+
+Output: `public/resume-en.pdf` and/or `public/resume-fr.pdf` (the files your website serves;
+committed to git so GitHub Pages deploys them).
+
+**Job-specific resume** (tailored to a company + job description):
+
+Run the `/tailor-resume` skill in Claude Code, then provide the **company name**, paste the
+**job description**, and pick the **language** (`en`, `fr`, or `both`). It proposes tailored
+edits (truthfully, no fabrication), waits for your approval, then writes
+`resume-generator/applications/<company>/` containing the tailored `resume-structured.md`, the
+`job-description.md`, and the generated PDF(s).
+
+> Generated PDFs (and LaTeX `.tex`/aux files) are gitignored; each application's
+> `resume-structured.md` + `job-description.md` are kept in git as your application history.
+
 ## Deploy on GitHub Pages
 
 This project is configured for static export (`output: 'export'`), making it compatible with GitHub Pages.
