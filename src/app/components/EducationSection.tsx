@@ -19,7 +19,7 @@ export default function EducationSection({ lang, fractalVariant, fractalRotation
               {edu.institution}
             </h3>
             <h4 className="text-lg md:text-xl font-normal text-theme-dark/90 mt-1 pointer-events-none">
-              {edu.degree}
+              {edu.degree[lang]}
             </h4>
             <p className="text-lg text-theme-dark/60 mt-0.5 pointer-events-none">
               {edu.period}

@@ -42,8 +42,8 @@ export const experiences: Experience[] = [
       {
         category: { fr: 'Produit', en: 'Product' },
         items: [
-          { fr: 'Stratégie et roadmap produit de l\'idéation au MVP à la production', en: 'Drove product strategy and roadmap from ideation to MVP and beyond' },
-          { fr: 'Animation discovery, sprint planning et rituels / direction UX/UI et handoff', en: 'Ran discovery, sprint planning and rituals / set UX/UI direction and handoff' },
+          { fr: 'Stratégie et roadmap produit de l\'idéation au MVP en 6 mois à la production', en: 'Drove product strategy and roadmap from ideation to MVP in 6 months to production' },
+          { fr: 'Discovery continue et priorisation par opportunity-solution trees (réduction d\'environ 40 % du scope prévu) / direction UX/UI et handoff', en: 'Continuous discovery and prioritization with opportunity-solution trees (cut ~40% of planned scope) / set UX/UI direction and handoff' },
         ],
       },
     ],
@@ -118,7 +118,7 @@ export const experiences: Experience[] = [
         category: { fr: 'Gestion de projet', en: 'Project management' },
         items: [
           { fr: 'Animation sprint planning et standups / QA produit et release readiness pour les comptes clés', en: 'Ran sprint planning and standups / product QA and release readiness for key accounts' },
-          { fr: 'Livraison des projets Warner Bros France : site institutionnel, e-commerce et app second screen', en: 'Led project delivery for Warner Bros France: corporate site, e-commerce and second-screen app' },
+          { fr: 'Livraison des projets Warner Bros France : site institutionnel, algorithme de recommandation, e-commerce et app second screen', en: 'Led project delivery for Warner Bros France: corporate site, recommendation algorithm, e-commerce and second-screen app' },
           { fr: 'Coordination prestataires et parties prenantes client / scope, planning et handover', en: 'Coordinated vendors and client stakeholders / scope, timeline and handover' },
         ],
       },
@@ -163,19 +163,19 @@ export const experiences: Experience[] = [
 
 export interface Education {
   institution: string;
-  degree: string;
+  degree: Bilingual;
   period: string;
 }
 
 export const educations: Education[] = [
   {
     institution: 'HETIC',
-    degree: 'Master of Computer Science',
+    degree: { fr: 'Master en informatique', en: 'Master of Computer Science' },
     period: '2011 - 2013',
   },
   {
     institution: 'La Sorbonne - Paris 1',
-    degree: 'Licence de Droit',
+    degree: { fr: 'Licence de droit', en: 'Law degree' },
     period: '2007 - 2010',
   },
 ];
@@ -197,14 +197,17 @@ export interface Interest {
 }
 
 export const interests: Interest[] = [
-  { fr: 'Lire / Écrire', en: 'Reading / Writing' },
-  { fr: 'MAO / DAO', en: 'MAO / DAO' },
+  { fr: 'Lire', en: 'Reading' },
+  { fr: 'Écrire', en: 'Writing' },
+  { fr: 'Production musicale', en: 'Music production' },
   { fr: 'Escalade', en: 'Climbing' },
+  { fr: 'Cuisine', en: 'Cooking' },
+  { fr: 'Philosophie', en: 'Philosophy' },
 ];
 
 export const languages: Bilingual[] = [
-  { fr: 'Français — langue maternelle', en: 'French — mother tongue' },
-  { fr: 'Anglais — maîtrise professionnelle', en: 'English — professional proficiency' },
+  { fr: 'Français — langue maternelle', en: 'French — native' },
+  { fr: 'Anglais — maîtrise professionnelle complète', en: 'English — full professional proficiency' },
 ];
 
 export const skills: Skill[] = [
@@ -212,8 +215,8 @@ export const skills: Skill[] = [
     category: { fr: 'Produit & delivery', en: 'Product & delivery' },
     items: [
       {
-        fr: 'Stratégie / Roadmap / Tech & UX Specs',
-        en: 'Strategy / Roadmap / Tech & UX Specs',
+        fr: 'Stratégie / Roadmap / OKR / Tech & UX Specs',
+        en: 'Strategy / Roadmap / OKRs / Tech & UX Specs',
       },
       {
         fr: 'User research / Discovery / Feedback / Interviews',
@@ -228,8 +231,12 @@ export const skills: Skill[] = [
         en: 'Stakeholder alignment / Risk mitigation',
       },
       {
-        fr: 'Delivery cross-fonctionnelle',
-        en: 'Cross-functional delivery',
+        fr: 'Product-led growth (PLG) / Pricing & monétisation',
+        en: 'Product-led growth (PLG) / Pricing & monetization',
+      },
+      {
+        fr: 'Constitution & management d\'équipe / Delivery cross-fonctionnelle',
+        en: 'Team building & management / Cross-functional delivery',
       },
     ],
   },

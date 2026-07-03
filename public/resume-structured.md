@@ -1,13 +1,14 @@
 ---
 name: Félix Averlant
-title_en: CPO / Product Manager / AI enthusiast
-title_fr: CPO / Product Manager / passionné d'IA
+title_en: Chief Product Officer
+title_fr: Chief Product Officer
 email: felix.averlant@gmail.com
 phone: +33 6 72 84 19 66
 linkedin: linkedin.com/in/felix-averlant
 website: www.felixaverlant.com
-summary_en: Ex-founder, 15 years in tech — from startup to scale-up. Multiple experiences in B2B SaaS, AdTech & e-commerce across product, UX and delivery. Drives product vision with stakeholders, challenges the status quo and follows teams through to delivery.
-summary_fr: Ex-fondateur, 15 ans dans la tech — de la startup à la scale-up. Plusieurs expériences en B2B SaaS, AdTech & e-commerce sur le produit, UX et le delivery. J'anime la vision produit avec les parties prenantes, challenge l'existant et suis les équipes jusqu'à la livraison.
+location: Paris, France
+summary_en: Hands-on product leader and ex-founder, 15 years in tech. I build B2B products from 0-to-1 and scale them — across strategy, UX, engineering and AI.
+summary_fr: Product leader hands-on et ex-fondateur, 15 ans dans la tech. Je conçois des produits B2B de 0 à 1 et les scale — de la stratégie, l'UX, l'ingénierie jusqu'à l'IA.
 ---
 
 <!--
@@ -28,98 +29,93 @@ summary_fr: Ex-fondateur, 15 ans dans la tech — de la startup à la scale-up. 
 ## Experience ||| Expérience
 
 ### Co-founder & CPTO
-- company: SustainSoft
-- industry: SaaS B2B
-- period: 2021 – 2026
+- company: SustainSoft (exit)
+- industry: GreenTech SaaS
+- period: Jul 2021 – Jun 2026 ||| juil. 2021 – juin 2026
 - location: Remote ||| À distance
 - Scaled from 0 to 100+ B2B customers; Techstars Paris '22 alumni ||| De 0 à 100+ clients B2B ; Techstars Paris '22 alumni
-- Raised a seed round; served as Board member ||| Levée d'un seed ; membre du board
-- Built and operated the B2B SaaS end-to-end solo: front-end, back-end, UX, AI, hosting, maintenance, deployment ||| Construction et opération du SaaS B2B de A à Z (solo) : front-end, back-end, UX, IA, hébergement, maintenance, déploiement
+- Co-founded with 2 partners; shipped the first MVP in 6 months; raised a seed round and served as Board member ||| Co-fondée avec 2 associés ; release du premier MVP en 6 mois ; levée d'un seed et membre du board
+- Built and operated the B2B SaaS end-to-end: front-end, back-end, UX, AI, hosting, maintenance, deployment ||| Construction et opération du SaaS B2B de A à Z : front-end, back-end, UX, IA, hébergement, maintenance, déploiement
 - Owned product strategy and roadmap from ideation to MVP to production ||| Stratégie et roadmap produit de l'idéation au MVP à la production
+- Defined product OKRs, then drove continuous discovery and prioritization with opportunity-solution trees — cut ~40% of planned scope ||| Définition des OKR produit, puis discovery continue et priorisation par opportunity-solution trees — réduction d'environ 40 % du scope prévu
+- Recruited and managed the developer team and freelancers ||| Recrutement et management de l'équipe de développeurs et des freelances
 
 ### Head of Product
 - company: Adot (acq. by Veepee)
-- industry: AdTech
-- period: 2017 – 2021
+- industry: AdTech SaaS
+- period: Jul 2017 – Jul 2021 ||| juil. 2017 – juil. 2021
 - location: Paris, France
-- Strategy, definition and delivery of new products ||| Stratégie, définition et livraison des nouveaux produits
+- Company scaled from 30 to 100+ employees and revenue from €6M to €24M ||| Passage de l'entreprise de 30 à 100+ employés et du CA de 6M à 24M€
+- Strategy, definition and delivery of new products / M&A ||| Stratégie, définition et livraison des nouveaux produits / M&A
 - Presented and aligned internal teams and clients on the roadmap ||| Présentation et alignement interne / clients sur la roadmap
-- Scaled the team from 30 to 100+ employees and revenue from €6M to €24M ||| Scaling de 30 à 100+ employés et du CA de 6M à 24M€
-- Led M&A / due diligence efforts ||| Direction des efforts M&A / due diligence
 
 ### Director of Analytics
 - company: Altima (acq. by Accenture)
-- industry: E-commerce / Lead gen
-- period: 2016 – 2017
+- industry: E-commerce & lead gen
+- period: Jun 2016 – Jun 2017 ||| juin 2016 – juin 2017
 - location: New York City, United States ||| New York City, États-Unis
-- Led the conversion rate optimization (CRO) team for e-commerce and lead-gen interfaces ||| Direction de l'équipe d'optimisation du taux de conversion (CRO) e-commerce et lead-gen
 - Delivered conversion gains from -4% to +9% ||| Gains de conversion de -4 % à +9 %
-- Designed client proposals and led optimization follow-up ||| Conception des offres clients et suivi des optimisations
-- Ran audits and communicated results ||| Audits et communication des résultats
+- Led the conversion rate optimization (CRO) team for e-commerce and lead-gen interfaces ||| Direction de l'équipe d'optimisation du taux de conversion (CRO) e-commerce et lead-gen
+- Designed client proposals, ran audits, led optimization follow-up and communicated results ||| Conception des offres clients, audits, suivi des optimisations et communication des résultats
 
 ### Account Manager
 - company: MFG Labs (acq. by Havas)
-- industry: Big data / Web agency
-- period: 2013 – 2016
+- industry: Data & web agency
+- period: Sep 2013 – May 2016 ||| sept. 2013 – mai 2016
 - location: Paris, France
-- Managed projects, sprints, standups, planning & QA ||| Gestion de projet, animation sprints / standups, planning & QA
-- Launched a corporate site, an e-commerce platform and a second-screen app ||| Release d'un site institutionnel, d'un e-commerce et d'une app second screen
-- Coordinated vendors and client stakeholders ||| Coordination des prestataires et parties prenantes client
+- Launched a corporate site, a recommendation algorithm, an e-commerce platform and a second-screen app ||| Release d'un site institutionnel, d'un algorithme de recommandation, d'un e-commerce et d'une app second screen
+- Project management & internal / client coordination, sprint planning, standups, QA ||| Pilotage de projets & coordination interne / client, sprints planning, animation des standups, QA
 - Defined, tracked and reported on product KPIs ||| Définition, suivi et reporting des KPI produit
 
 ### Conversion Consultant ||| Consultant Conversion
 - company: Altima (acq. by Accenture)
-- industry: E-commerce / Lead gen
-- period: 2012 – 2013
+- industry: E-commerce & lead gen
+- period: Jun 2012 – Sep 2013 ||| juin 2012 – sept. 2013
 - location: Paris, France
-- Conversion rate optimization (CRO) of interfaces through UX ||| Optimisation du taux de conversion (CRO) d'interfaces via l'UX
 - Achieved conversion gains up to +19% ||| Gains de conversion jusqu'à +19 %
+- CRO of interfaces through data analysis and UX ||| CRO d'interfaces via l'analyse de données et l'UX
 - Owned pre-sales through to client reporting (UX and results) ||| Gestion de l'avant-vente, de l'UX jusqu'au reporting clients
-- Performed data analysis and configured testing/analytics tools ||| Analyse de données et configuration d'outils de test / analytics
 
 ## Education ||| Formation
 
 ### Master of Computer Science ||| Master en informatique
 - institution: HETIC
-- period: 2011 – 2013
+- period: Sep 2011 – Sep 2013 ||| sept. 2011 – sept. 2013
 
 ### Law degree ||| Licence de droit
 - institution: Paris 1 - La Sorbonne
-- period: 2007 – 2010
+- period: Sep 2007 – Jun 2010 ||| sept. 2007 – juin 2010
 
 ## Skills ||| Compétences
 
-### Product & delivery ||| Produit & delivery
-- Strategy / Roadmap / Tech & UX specs ||| Stratégie / Roadmap / Specs tech & UX
-- User research / Discovery / Feedback / Interviews
-- Sprint planning / SCRUM / Kanban / Backlog prioritization ||| Sprint planning / SCRUM / Kanban / Priorisation du backlog
-- Stakeholder alignment / Risk mitigation ||| Alignement des parties prenantes / Mitigation des risques
-- Cross-functional delivery ||| Delivery cross-fonctionnel
-- Design system / Prototyping / Wireframes ||| Design system / Prototypage / Wireframes
-- User journey / UX audits ||| Parcours utilisateur / Audits UX
-- A/B testing / Conversion rate optimization (CRO) ||| A/B testing / Optimisation de la conversion (CRO)
+<!-- Full skill pool lives in resume-generator/skills-database.md; keep ~2 lines per group here. -->
+
+### Product leadership ||| Leadership produit
+- Product vision & strategy · Roadmap · OKRs · Discovery ||| Vision & stratégie produit · Roadmap · OKR · Discovery
+- Go-to-market · Cross-functional delivery · Team building & management · Stakeholder & exec alignment ||| Go-to-market · Delivery cross-fonctionnel · Constitution & management d'équipe · Alignement parties prenantes & direction
 
 ### AI ||| IA
-- Prompt engineering / ReAct patterns
-- MCP server & client / RAG
-- Agent architecture ||| Architecture d'agents
-- Evaluation / Tracing
-- AI UX patterns / A/B testing prompts / acceptance thresholds / quality dashboards / failure-mode design ||| Patterns UX IA / A/B testing de prompts / seuils d'acceptation / dashboards qualité / design des modes d'échec
+- Agent architecture · MCP · RAG · Prompt engineering · Evaluation · OpenClaw · BMAD ||| Architecture d'agents · MCP · RAG · Prompt engineering · Évaluation · OpenClaw · BMAD
+- Failure-mode design
 
-### Tech
-- JavaScript / TypeScript / React / Next.js
-- Storybook / Playwright / Algolia
-- GraphQL / SQL / NoSQL / Google Cloud / Sentry
+### UX ||| UX
+- Design systems · Prototyping · User journeys ||| Design systems · Prototypage · Parcours utilisateurs
+- AI UX patterns · UX audits · CRO ||| Patterns UX IA · Audits UX · CRO
 
-### Software & tools ||| Logiciels et outils
-- AI: Claude / LangChain / LangFuse / Vellum / OpenClaw / BMAD / agent-OS ||| IA : Claude / LangChain / LangFuse / Vellum / OpenClaw / BMAD / agent-OS
-- PM/PO: Productboard / Notion / Atlassian / Obsidian / Office / Tableau / GA / GTM / Figma
+### Tech ||| Tech
+- TypeScript · Next.js · GraphQL · SQL · NoSQL · Google Cloud · Serverless
+
+### Tools ||| Outils
+- Claude · LangChain · LangFuse / Productboard · Notion · Figma · Atlassian / GA · GTM · Tableau
 
 ## Languages ||| Langues
 - French — native ||| Français — langue maternelle
-- English — professional proficiency ||| Anglais — maîtrise professionnelle
+- English — full professional proficiency ||| Anglais — maîtrise professionnelle complète
 
 ## Interests ||| Intérêts
-- Reading / Writing ||| Lire / Écrire
-- Music production (MAO/DAO) ||| Production musicale (MAO/DAO)
+- Reading ||| Lire
+- Writing ||| Écrire
+- Music production ||| Production musicale
 - Climbing ||| Escalade
+- Cooking ||| Cuisine
+- Philosophy ||| Philosophie

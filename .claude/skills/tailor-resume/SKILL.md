@@ -7,7 +7,7 @@ description: Generate a company-tailored, ATS-valid EN+FR resume PDF from a comp
 
 Produce a company-specific version of Félix's resume that is tailored to a given job
 description, then render both language PDFs. The tailoring must stay **truthful** — you
-re-emphasize and rephrase existing facts, you never invent anything.
+re-emphasize and rephrase existing facts, you never invent anything. You can add and remove entries if it's the job description but always ask the user before that. 
 
 ## Inputs
 
@@ -23,12 +23,25 @@ If a required input is missing, ask for it once before proceeding.
 1. **Read the master** `public/resume-structured.md`. This is the pool of true
    content and the exact schema you must reproduce (bilingual `English ||| Français` lines,
    `---` frontmatter, `## Section ||| Section`, `### Entry`, `- key:` metadata bullets).
+   Also read the **skills database** `resume-generator/skills-database.md`: the full pool of
+   truthful skill lines (same `|||` format, grouped identically). The master shows only ~2
+   lines per skill group; when a job description emphasizes a skill that is in the database but
+   not on the base resume, swap it in — but keep the tailored Skills section to ~2 lines per
+   group so it stays scannable. Never add a skill that is absent from the database.
 
 2. **Analyze the job description.** Identify: the role focus and seniority, must-have skills,
-   the domain/industry, and the concrete ATS keywords/phrases the employer uses.
+   the domain/industry, the **exact job title** (e.g. "Director of Product Management"), and
+   the concrete ATS keywords/phrases the employer uses.
 
 3. **Draft a tailored version** in the **same schema** as the master:
-   - Rewrite `summary_en` / `summary_fr` to speak directly to this role and company.
+   - **Surface the exact target title.** The base headline is
+     `Chief Product Officer / AI Product Leader`. Insert the exact title from the job
+     description as a middle segment, keeping the surrounding framing (e.g.
+     `Chief Product Officer / Director of Product Management / AI Product Leader`). ATS/recruiters
+     search by exact title, so it must appear verbatim.
+   - Rewrite `summary_en` / `summary_fr` to speak directly to this role and company, and
+     **weave the exact target title into the summary** (Jobscan's recommended placement for
+     a title not previously held under that exact name).
    - Reorder and re-emphasize experience bullets and skill groups so the most relevant ones
      come first and use the employer's vocabulary.
    - Weave in matching ATS keywords **only where they reflect real experience** already present
@@ -36,8 +49,10 @@ If a required input is missing, ask for it once before proceeding.
    - Trim the least-relevant bullets **only if the user asks** for a shorter / one-page CV.
 
    **Guardrails — do not violate:**
-   - Never invent or alter employers, job titles, dates, or skills.
-   - Only re-emphasize and rephrase facts that already exist in the master.
+   - Never invent or alter employers or dates. The per-entry job titles/roles under
+     each `### Entry` (and their employers and dates) stay exactly as in the master — only the
+     top **headline title line** and summary adopt the target title, as an emphasis of the
+     same seniority, never a claim to a role actually held.
    - Keep the bilingual `|||` format and section/entry structure intact so the renderer parses it.
 
 4. **Confirm before rendering (required).** Show the user a concise summary of the proposed
@@ -59,7 +74,8 @@ If a required input is missing, ask for it once before proceeding.
    `/Library/TeX/texbin`; if `xelatex` is not found, prefix the command with
    `PATH="/Library/TeX/texbin:$PATH"`.)
 
-7. **Report** the output paths and a short summary of what was tailored for this application.
+7. **Report** the output paths and a short summary of what was tailored for
+   this application.
 
 ## Notes
 

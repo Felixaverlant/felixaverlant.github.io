@@ -55,7 +55,7 @@ export default async function Home({ params }: { params: { lang: Lang } | Promis
                   <HeaderToggles currentLang={lang} position="relative" />
                 </div>
                 <p className="text-lg md:text-xl font-normal text-theme-dark/60 leading-tight mt-1">
-                  Chief Product Officer | IA enthusiast
+                  Chief Product Officer
                 </p>
               </div>
             </div>

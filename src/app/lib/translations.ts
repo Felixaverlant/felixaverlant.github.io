@@ -61,7 +61,7 @@ export const translations = {
     bioHeadingCta: "Open to work.",
     contactMe: 'Contact me',
     aboutMe: {
-      text: "Former founder, 15 years in tech — from startup to scale-up. Several experiences in B2B SaaS, AdTech, IA & e-commerce in product, UX and delivery. I like solving complex problems with simple, modular solutions, drawing inspiration from varied domains. I drive the product vision with stakeholders, challenge the status quo and follow teams through to delivery.",
+      text: "Former founder, 15 years in tech — from startup to scale-up. Several experiences in B2B SaaS, AdTech, AI & e-commerce in product, UX and delivery. I like solving complex problems with simple, modular solutions, drawing inspiration from varied domains. I drive the product vision with stakeholders, challenge the status quo and follow teams through to delivery.",
       aboutLink: 'Learn more',
       ctaLinkedIn: 'LinkedIn',
       ctaCv: 'CV (PDF)',
