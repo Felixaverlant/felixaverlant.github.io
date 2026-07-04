@@ -29,7 +29,7 @@ summary_fr: Product leader hands-on et ex-fondateur, 15 ans dans la tech. Je con
 ## Experience ||| Expérience
 
 ### Co-founder & CPTO
-- company: SustainSoft (exit)
+- company: SustainSoft (medium leaver)
 - industry: GreenTech SaaS
 - period: Jul 2021 – Jun 2026 ||| juil. 2021 – juin 2026
 - location: Remote ||| À distance

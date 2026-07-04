@@ -16,7 +16,25 @@ re-emphasize and rephrase existing facts, you never invent anything. You can add
 - **Language** (required): `en`, `fr`, or `both`. The user will usually pick one. If not
   specified, ask which language(s) to generate before rendering.
 
-If a required input is missing, ask for it once before proceeding.
+### Invocation format (one-shot)
+
+The skill args are parsed positionally so the user can supply everything in one call:
+
+1. **First line** → company name.
+2. **Second line** → language (`en`, `fr`, or `both`).
+3. **Everything after the second line** → the pasted job description.
+
+Example:
+
+```
+/tailor-resume Acme Corp
+en
+<paste the full job description here…>
+```
+
+Be tolerant: if the second line isn't a valid language token, treat it as part of the job
+description and ask which language to generate. If a required input is still missing after
+parsing, ask for it once before proceeding.
 
 ## Steps
 
@@ -35,9 +53,9 @@ If a required input is missing, ask for it once before proceeding.
 
 3. **Draft a tailored version** in the **same schema** as the master:
    - **Surface the exact target title.** The base headline is
-     `Chief Product Officer / AI Product Leader`. Insert the exact title from the job
+     `Chief Product Officer`. Insert the exact title from the job
      description as a middle segment, keeping the surrounding framing (e.g.
-     `Chief Product Officer / Director of Product Management / AI Product Leader`). ATS/recruiters
+     `Chief Product Officer / Director of Product Management `). ATS/recruiters
      search by exact title, so it must appear verbatim.
    - Rewrite `summary_en` / `summary_fr` to speak directly to this role and company, and
      **weave the exact target title into the summary** (Jobscan's recommended placement for
@@ -69,7 +87,8 @@ If a required input is missing, ask for it once before proceeding.
    ```
    node resume-generator/build.mjs resume-generator/applications/<company-slug>/resume-structured.md --lang <choice>
    ```
-   This writes `resume-en.pdf` and/or `resume-fr.pdf` into that folder. If it fails because the TeX
+   For application builds the renderer appends the company slug to the filename, so this writes
+   `resume-en-<company-slug>.pdf` and/or `resume-fr-<company-slug>.pdf` into that folder. If it fails because the TeX
    toolchain is missing, relay the install instructions it prints. (Note: the TeX binaries live at
    `/Library/TeX/texbin`; if `xelatex` is not found, prefix the command with
    `PATH="/Library/TeX/texbin:$PATH"`.)

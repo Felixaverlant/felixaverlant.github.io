@@ -11,7 +11,7 @@
 
 import { readFileSync, writeFileSync, existsSync, rmSync } from 'node:fs'
 import { spawnSync } from 'node:child_process'
-import { dirname, join, resolve } from 'node:path'
+import { basename, dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const scriptDir = dirname(fileURLToPath(import.meta.url))
@@ -355,11 +355,18 @@ function main () {
 
   const langs = LANGS.filter((l) => langChoice === 'both' || l.code === langChoice)
 
+  // For tailored builds under applications/<company-slug>/, append the tokenized
+  // company name to the filename (resume-<lang>-<slug>.pdf). The base build in public/
+  // keeps the plain resume-<lang>.pdf names the website serves.
+  const isApplication = basename(dirname(outDir)) === 'applications'
+  const slugSuffix = isApplication ? `-${basename(outDir)}` : ''
+
   if (!dry) preflight()
   const model = parse(readFileSync(source, 'utf8'))
 
   for (const lang of langs) {
-    const texPath = join(outDir, `resume-${lang.code}.tex`)
+    const fileName = `resume-${lang.code}${slugSuffix}`
+    const texPath = join(outDir, `${fileName}.tex`)
     writeFileSync(texPath, renderTex(model, lang), 'utf8')
     if (dry) {
       console.log(`✓ ${texPath} (dry)`)
@@ -367,7 +374,7 @@ function main () {
     }
     compile(texPath, outDir)
     rmSync(texPath, { force: true }) // keep only the PDF (esp. important in public/)
-    console.log(`✓ ${join(outDir, `resume-${lang.code}.pdf`)}`)
+    console.log(`✓ ${join(outDir, `${fileName}.pdf`)}`)
   }
 }
 
