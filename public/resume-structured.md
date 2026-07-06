@@ -45,7 +45,7 @@ summary_fr: Product leader hands-on et ex-fondateur, 15 ans dans la tech. Je con
 - industry: AdTech SaaS
 - period: Jul 2017 – Jul 2021 ||| juil. 2017 – juil. 2021
 - location: Paris, France
-- Company scaled from 30 to 100+ employees and revenue from €6M to €24M ||| Passage de l'entreprise de 30 à 100+ employés et du CA de 6M à 24M€
+- Company scaled from 30 to 100+ employees (3 Scrum squads, ~15 people, led via PMs & POs) and revenue from €6M to €24M ||| Passage de l'entreprise de 30 à 100+ employés (3 squads Scrum, ~15 personnes, managées via PM & PO) et du CA de 6M à 24M€
 - Strategy, definition and delivery of new products / M&A ||| Stratégie, définition et livraison des nouveaux produits / M&A
 - Presented and aligned internal teams and clients on the roadmap ||| Présentation et alignement interne / clients sur la roadmap
 

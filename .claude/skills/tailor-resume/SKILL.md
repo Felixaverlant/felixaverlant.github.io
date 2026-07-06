@@ -87,8 +87,9 @@ parsing, ask for it once before proceeding.
    ```
    node resume-generator/build.mjs resume-generator/applications/<company-slug>/resume-structured.md --lang <choice>
    ```
-   For application builds the renderer appends the company slug to the filename, so this writes
-   `resume-en-<company-slug>.pdf` and/or `resume-fr-<company-slug>.pdf` into that folder. If it fails because the TeX
+   For application builds the renderer appends the name + company slug to the filename, so this
+   writes `resume-en-averlant-<company-slug>.pdf` and/or `resume-fr-averlant-<company-slug>.pdf`
+   into that folder. If it fails because the TeX
    toolchain is missing, relay the install instructions it prints. (Note: the TeX binaries live at
    `/Library/TeX/texbin`; if `xelatex` is not found, prefix the command with
    `PATH="/Library/TeX/texbin:$PATH"`.)

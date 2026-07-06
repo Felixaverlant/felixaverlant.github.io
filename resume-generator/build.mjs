@@ -355,11 +355,11 @@ function main () {
 
   const langs = LANGS.filter((l) => langChoice === 'both' || l.code === langChoice)
 
-  // For tailored builds under applications/<company-slug>/, append the tokenized
-  // company name to the filename (resume-<lang>-<slug>.pdf). The base build in public/
-  // keeps the plain resume-<lang>.pdf names the website serves.
+  // For tailored builds under applications/<company-slug>/, append the name + tokenized
+  // company name to the filename (resume-<lang>-averlant-<slug>.pdf). The base build in
+  // public/ keeps the plain resume-<lang>.pdf names the website serves.
   const isApplication = basename(dirname(outDir)) === 'applications'
-  const slugSuffix = isApplication ? `-${basename(outDir)}` : ''
+  const slugSuffix = isApplication ? `-averlant-${basename(outDir)}` : ''
 
   if (!dry) preflight()
   const model = parse(readFileSync(source, 'utf8'))

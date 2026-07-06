@@ -66,7 +66,7 @@ export const experiences: Experience[] = [
       {
         category: { fr: 'Team management', en: 'Team management' },
         items: [
-          { fr: 'Scaling de 30 à 100+ employés et du CA de 6M à 24M€', en: 'Drove scaling from 30 to 100+ employees and revenue from €6M to €24M' },
+          { fr: 'Scaling de 30 à 100+ employés (3 squads Scrum, ~15 personnes, managées via PM & PO) et du CA de 6M à 24M€', en: 'Drove scaling from 30 to 100+ employees (3 Scrum squads, ~15 people, led via PMs & POs) and revenue from €6M to €24M' },
           { fr: 'Direction des équipes produit et projets / priorisation, capacité et livraison', en: 'Led product and project teams / prioritization, capacity and delivery' },
           { fr: 'Partenariat avec les C-suite sur la stratégie produit et la roadmap', en: 'Partnered with C-suite on product strategy and roadmap' },
         ],
