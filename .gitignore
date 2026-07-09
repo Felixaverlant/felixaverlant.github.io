@@ -35,6 +35,7 @@ yarn-error.log*
 # The BASE PDFs public/resume-en.pdf and public/resume-fr.pdf are intentionally committed:
 # the website serves them and GitHub Pages deploys committed files.
 resume-generator/applications/
+resume-generator/variants/
 resume-generator/**/*.pdf
 resume-generator/**/*.tex
 public/resume-*.tex
