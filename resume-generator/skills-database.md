@@ -54,6 +54,6 @@
 - Storybook · Playwright · Algolia · Gcloud · Sentry
 
 ### Tools ||| Outils
-- ★ default — Claude · LangChain · LangFuse / Productboard · Notion · Figma · Atlassian / GA · GTM · Tableau
-- AI tools (full): Claude · LangChain · LangFuse · Vellum · OpenClaw · BMAD · agent-OS ||| Outils IA (complet) : Claude · LangChain · LangFuse · Vellum · OpenClaw · BMAD · agent-OS
+- ★ default — Claude · LangChain · LangGraph · LangFuse / Notion · Figma · Atlassian / GA · GTM · Tableau
+- AI tools (full): Claude · LangChain · LangGraph · LangFuse · Vellum · OpenClaw · BMAD · agent-OS ||| Outils IA (complet) : Claude · LangChain · LangGraph · LangFuse · Vellum · OpenClaw · BMAD · agent-OS
 - PM tools (full): Productboard · Notion · Figma · Atlassian · Obsidian · Office · Tableau · GA · GTM ||| Outils PM (complet) : Productboard · Notion · Figma · Atlassian · Obsidian · Office · Tableau · GA · GTM

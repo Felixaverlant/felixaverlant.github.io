@@ -106,7 +106,7 @@ summary_fr: Product leader hands-on et ex-fondateur, 15 ans dans la tech. Je con
 - TypeScript · Next.js · GraphQL · SQL · NoSQL · Google Cloud · Serverless
 
 ### Tools ||| Outils
-- Claude · LangChain · LangFuse / Productboard · Notion · Figma · Atlassian / GA · GTM · Tableau
+- Claude · LangChain · LangGraph · LangFuse / Notion · Figma · Atlassian / GA · GTM · Tableau
 
 ## Languages ||| Langues
 - French — native ||| Français — langue maternelle

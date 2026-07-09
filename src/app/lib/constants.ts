@@ -306,7 +306,7 @@ export const skills: Skill[] = [
         title: { fr: 'IA', en: 'AI' },
         items: [
           { fr: 'Claude', en: 'Claude' },
-          { fr: 'LangChain / LangFuse', en: 'LangChain / LangFuse' },
+          { fr: 'LangChain / LangGraph / LangFuse', en: 'LangChain / LangGraph / LangFuse' },
           { fr: 'Vellum / OpenClaw', en: 'Vellum / OpenClaw' },
           { fr: 'BMAD / agent-OS', en: 'BMAD / agent-OS' },
         ],
@@ -314,7 +314,7 @@ export const skills: Skill[] = [
       {
         title: { fr: 'PM/PO', en: 'PM/PO' },
         items: [
-          { fr: 'Productboard', en: 'Productboard' },
+          // Hidden but kept in data — { fr: 'Productboard', en: 'Productboard' },
           { fr: 'Notion / Atlassian', en: 'Notion / Atlassian' },
           { fr: 'Obsidian / Office', en: 'Obsidian / Office' },
           { fr: 'Tableau / GA / GTM', en: 'Tableau / GA / GTM' },
